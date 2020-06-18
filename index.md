@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -10,15 +11,19 @@
     <script>
         THREEx.ArToolkitContext.baseURL = 'https://raw.githack.com/jeromeetienne/ar.js/master/three.js/'
     </script>
+    <script src="./script.js"></script>
+    <link rel="stylesheet" type="text/css" href="./style.css"/>
 </head>
 
 <body style='margin: 0; overflow: hidden;'>
-    <a-scene
-        vr-mode-ui="enabled: false"
-		embedded
+    <div class="centered instructions"></div>
+    <a-scene 
+        vr-mode-ui='enabled: false' 
+        embedded
         arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;'>
-        
-        <a-camera gps-camera rotation-reader></a-camera>
-        <a-entity gltf-model="./assets/magnemite/scene.gltf" rotation="0 180 0" scale="0.07 0.07 0.07" gps-entity-place="longitude: 35.2721; latitude: -120.6688;" animation-mixer/>
-    </a-scene>
+    <a-camera gps-camera rotation-reader></a-camera>
+</a-scene>
+<div class="centered">
+    <button data-action="change"></button>
+</div>
 </body>
